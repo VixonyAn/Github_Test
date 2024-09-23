@@ -50,6 +50,7 @@ namespace Github_Test
         }
         public override string ToString()
         {
+            TotalHealingValue();
             return $"Apple Variety: {_variety}\nAmount: {_amount}\nHealing Value per Apple: {_hpValue}\nTotal Healing Value {_totalHpValue}";
         }
         #endregion
