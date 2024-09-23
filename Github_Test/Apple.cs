@@ -11,6 +11,8 @@ namespace Github_Test
         #region Instance Fields
         private string _variety;
         private int _amount;
+        private int _hpValue;
+        private int _totalHpValue;
         #endregion
 
         #region Properties
@@ -24,6 +26,12 @@ namespace Github_Test
             get { return _amount; }
             set { _amount = value; }
         }
+        public int HpValue { get; set; }
+        public int TotalHpValue
+        {
+            get { return _totalHpValue; }
+            set { _totalHpValue = value; }
+        }
         #endregion
 
         #region Constructors
@@ -31,13 +39,18 @@ namespace Github_Test
         {
             _variety = variety;
             _amount = amount;
+            _hpValue = 5;
         }
         #endregion
 
         #region Methods
+        public void TotalHealingValue()
+        {
+            _totalHpValue = _hpValue * _amount;
+        }
         public override string ToString()
         {
-            return $"Apple Variety: {_variety}\nAmount: {_amount}";
+            return $"Apple Variety: {_variety}\nAmount: {_amount}\nHealing Value per Apple: {_hpValue}\nTotal Healing Value {_totalHpValue}";
         }
         #endregion
     }
