@@ -9,5 +9,6 @@ namespace Github_Test
     internal class Sofies_class
     {
         private string _name;
+        private string _description;
     }
 }
