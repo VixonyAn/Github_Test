@@ -24,5 +24,22 @@ namespace Github_Test
 
         #endregion
 
+        #region constructors
+        public soldier(string name, int age) 
+        {
+            _name = name;
+            _age = age;
+            _hp = 50;
+        }
+        #endregion
+
+        #region methodes
+        public string ToString() 
+        {
+            return Name + Age + HP;
+        }
+
+        #endregion
+
     }
 }
